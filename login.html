@@ -13,24 +13,29 @@
         </div>
         <nav>
             <ul>
-                <a href="index.html">Home</a><br>
-                <a href="#aboutus">About Us</a><br>
-                <a href="#departments">Departments</a><br>
-                <a href="#registrations">Registrations</a><br>
+              <li><a href="index.html">Home</a></li>
+                <li>  <a href="#aboutus">About Us</a></li>
+                    <li> <a href="#departments">Departments</a></li>
+                        <li> <a href="#registrations">Registrations</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="login">
-            <h1>Login</h1>
-            <form id="login-form">
-              <li>  <input type="email" placeholder="Email" required></li>
-              <li><input type="password" placeholder="Password" required></li>
-               <li> <button type="submit">Login</button></li>
-            </form>
-        </section>
-    </main>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm" onsubmit="return validateForm()">
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <div class="error-message" id="errorMessage"></div>
+    </div>
 
     <footer>
         <p>&copy; 2024 College Name. All rights reserved.</p>
