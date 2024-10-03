@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Page</title>
+    <title>College Web Page</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlhBjxblDKV-Y2xvOsuhCrKgqR-JDGeh3Ydw&s" alt="College Logo" width="100">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlhBjxblDKV-Y2xvOsuhCrKgqR-JDGeh3Ydw&s" alt="College Logo" width="900">
         </div>
         <nav>
             <ul>
-                <li><a href="#aboutus">About Us</a></li>
-                <li><a href="#ecap">ECAP</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <a href="#aboutus">About Us</a>
+                <a href="#departments">Departments</a>
+                <a href="#registrations">Registrations</a>
+                <a href="#login">Login</a>
             </ul>
         </nav>
     </header>
@@ -24,17 +25,56 @@
     <main>
         <section id="aboutus">
             <h1>About Us</h1>
-            <p>Welcome to our college! We are dedicated to providing quality education and fostering a nurturing environment.</p>
+            <p>Vignan's Institute of Information Technology (VIIT) was established in 2002 in the City of Destiny, Visakhapatnam, to cater to the educational needs of the general public. It acquired Autonomous status in the year 2017 and NBA and NAAC(A Grade) accredited Institute. The experience gained by Vignan through its earlier institutions at Guntur has only helped in establishing very high quality standards right from the inception and also is one of the reasons for the success.</p>
         </section>
 
-        <section id="ecap">
-            <h1>ECAP</h1>
-            <p>ECAP (Extended College Access Program) aims to support students in their educational journey.</p>
+        <section id="departments">
+            <h1>Departments</h1>
+            <ul>
+                <li><a href="#cse">Computer Science Engineering (CSE)</a></li>
+                <li><a href="#mech">Mechanical Engineering (MECH)</a></li>
+                <li><a href="#civil">Civil Engineering (CIVIL)</a></li>
+                <li><a href="#eee">Electrical and Electronics Engineering (EEE)</a></li>
+            </ul>
+            <div id="cse">
+                <h2>Computer Science Engineering (CSE)</h2>
+                <p>Learn about algorithms, programming, and software development.</p>
+            </div>
+            <div id="mech">
+                <h2>Mechanical Engineering (MECH)</h2>
+                <p>Focus on mechanics, dynamics, and thermodynamics.</p>
+            </div>
+            <div id="civil">
+                <h2>Civil Engineering (CIVIL)</h2>
+                <p>Study the design and construction of infrastructure.</p>
+            </div>
+            <div id="eee">
+                <h2>Electrical and Electronics Engineering (EEE)</h2>
+                <p>Explore circuits, signals, and systems.</p>
+            </div>
         </section>
 
-        <section id="contact">
-            <h1>Contact Us</h1>
-            <form id="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder=
+        <section id="registrations">
+            <h1>Registrations</h1>
+            <p><a href="registration.html">Click here to register</a></p>
+        </section>
+
+        <section id="login">
+            <h1>Login</h1>
+            <p><a href="login.html">Click here to log in</a></p>
+        </section>
+
+        <section>
+            <h1>College Introduction Video</h1>
+            <video width="600" controls>
+                <source src="https://www.youtube.com/watch?v=sq8ISpdiaLc" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 College Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
