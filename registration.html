@@ -5,6 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration - College Web Page</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+
+        .header {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .logo img {
+            width: 750px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #5cb85c;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 250px);
+        }
+
+        .registration-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .registration-container h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .registration-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .registration-form input, 
+        .registration-form select {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .registration-form button {
+            padding: 12px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .registration-form button:hover {
+            background-color: #4cae4c;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -13,23 +115,24 @@
         </div>
         <nav>
             <ul>
-                <li> <a href="index.html">Home</a></li>
-                    <li><a href="index.html">About Us</a></li>
-                        <li><a href="departments.html">Departments</a></li>
-                            <li><a href="login.html">Login</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About Us</a></li>
+                <li><a href="departments.html">Departments</a></li>
+                <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="registration">
-            <h1>Registration</h1>
-            <form id="registration-form">
-              <li> <input type="text" placeholder="Full Name" required></li>
-                <li> <input type="email" placeholder="Email" required></li>
-                    <li><input type="password" placeholder="Password" required></li>
-                        <li> <label for="department">Select Department:</label></li>
-                            <select id="department" required>
+        <div class="registration-container">
+            <h1>Registration Form</h1>
+            <form class="registration-form" id="registration-form" action="submit_registration.html" method="POST">
+                <input type="text" placeholder="Full Name" name="full_name" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="password" placeholder="Password" name="password" required>
+                
+                <label for="department">Select Department:</label>
+                <select id="department" name="department" required>
                     <option value="" disabled selected>Select your department</option>
                     <option value="cse">Computer Science Engineering (CSE)</option>
                     <option value="mech">Mechanical Engineering (MECH)</option>
@@ -38,7 +141,7 @@
                 </select>
                 <button type="submit">Register</button>
             </form>
-        </section>
+        </div>
     </main>
 
     <footer>
